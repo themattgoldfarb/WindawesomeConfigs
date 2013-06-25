@@ -86,7 +86,7 @@ config.ProgramRules = [
 		rules = [ProgramRule.Rule(workspace = 4, titlebar = State.HIDDEN, windowBorders = State.HIDDEN)]
 	),
 	ProgramRule(
-		displayName = ".*Sublime 2.*",
+		displayName = ".*Sublime Text 2.*",
 		onWindowCreatedAction = OnWindowCreatedOrShownAction.HideWindow,
 		rules = [ProgramRule.Rule(workspace = 4, titlebar = State.HIDDEN, windowBorders = State.HIDDEN)]
 	),

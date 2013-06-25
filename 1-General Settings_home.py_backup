@@ -121,7 +121,7 @@ config.Bars = Enumerable.ToArray[Bar]([
 		backgroundColor = Color.Black,
 		font = Font("Consolas", 11)
 	),
-		Bar(windawesome.monitors[1],
+		Bar(windawesome.monitors[3],
 		[
 			WorkspacesWidget(
 				normalForegroundColor = workspacesWidgetForegroundColors,
@@ -169,7 +169,7 @@ config.Bars = Enumerable.ToArray[Bar]([
 		backgroundColor = Color.Black,
 		font = Font("Consolas", 11)
 	),
-		Bar(windawesome.monitors[1],
+		Bar(windawesome.monitors[2],
 		[
 			WorkspacesWidget(
 				normalForegroundColor = workspacesWidgetForegroundColors,
@@ -268,18 +268,18 @@ config.Bars = Enumerable.ToArray[Bar]([
 ])
 
 config.Workspaces = Enumerable.ToArray[Workspace]([
-	Workspace(windawesome.monitors[0], TileLayout(layoutAxis = TileLayout.LayoutAxis.TopToBottom, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[0]], name = 'chat/email'),
-	Workspace(windawesome.monitors[0], TileLayout(layoutAxis = TileLayout.LayoutAxis.TopToBottom, masterAreaWindowsCount = 1, stackAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaFactor = 0.5), [config.Bars[0]], name = 'explorer'),
-	Workspace(windawesome.monitors[1], TileLayout(layoutAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, stackAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaFactor = 0.5), [config.Bars[1]], name = 'browsers'),
-	Workspace(windawesome.monitors[1], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[1]], name = 'Text'),
-	Workspace(windawesome.monitors[1], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[1]], name = 'Spotfire'),
-	Workspace(windawesome.monitors[1], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[1]], name = 'music'),
-	Workspace(windawesome.monitors[1], FullScreenLayout(), [config.Bars[1]]),
-	Workspace(windawesome.monitors[1], FullScreenLayout(), [config.Bars[1]]),
-	Workspace(windawesome.monitors[1], FullScreenLayout(), [], name = 'Remote')
+	Workspace(windawesome.monitors[0], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[0]], name = 'chat'),
+	Workspace(windawesome.monitors[0], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.TopToBottom, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[0]], name = 'explorer'),
+	Workspace(windawesome.monitors[0], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[0]], name = 'browsers'),
+	Workspace(windawesome.monitors[0], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[0]], name = 'dev'),
+	Workspace(windawesome.monitors[0], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[0]], name = 'mail'),
+	Workspace(windawesome.monitors[0], TileLayout(masterAreaAxis = TileLayout.LayoutAxis.LeftToRight, masterAreaWindowsCount = 1, masterAreaFactor = 0.5), [config.Bars[0]], name = 'music'),
+	Workspace(windawesome.monitors[0], FullScreenLayout(), [config.Bars[0]]),
+	Workspace(windawesome.monitors[0], FullScreenLayout(), [config.Bars[0]]),
+	Workspace(windawesome.monitors[0], FullScreenLayout(), [], name = 'Remote')
 ])
 
-config.StartingWorkspaces = [config.Workspaces[0],config.Workspaces[2]]
+config.StartingWorkspaces = [config.Workspaces[0],config.Workspaces[1],config.Workspaces[2],config.Workspaces[3]]
 
 config.Plugins = [
 	#LoggerPlugin(logWorkspaceSwitching = True, logWindowMinimization = True, logWindowRestoration = True,
